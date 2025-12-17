@@ -115842,7 +115842,7 @@ window.__require = function e(t, i, n) {
 cc.game.once(cc.game.EVENT_ENGINE_INITED, () => {
     const i18n = window.__require("i18n");
     const lang = cc.sys.localStorage.getItem("language")
-    console.log('i18n ready-1:', i18n, lang);
+    console.log('i18n ready:', i18n, lang);
 
     Helper.http("index.php/api/index/ip").then(res => {
         if (res.code == 1) {
