@@ -40212,19 +40212,24 @@ window.__require = function e(t, i, n) {
                 update_newpwd2: cc.EditBox
             },
             onLoad: function () {
-                this.netWork = e("LobbyNetWork"),
-                    this.playerInfo = e("PlayerInfo").getInstant,
-                    this.lobbyMain = cc.find("Canvas").getComponent("LobbyMain")
+                this.netWork = e("LobbyNetWork");
+                this.playerInfo = e("PlayerInfo").getInstant;
+                this.lobbyMain = cc.find("Canvas").getComponent("LobbyMain");
+                this.showBankUI(1);
             },
             start: function () {
+                const that = this;
                 this.updateView()
+                this.netWork.socket.on("sendCoinResult", function (e) {
+                    that.updateView()
+                })
             },
             updateView: function () {
-                this.playerInfo || (this.playerInfo = e("PlayerInfo").getInstant),
-                    this.save_playerCoin.string = this.playerInfo.playerCoin.toFixed(2),
-                    this.save_bankCoin.string = (this.playerInfo.playerBankCoin / this.playerInfo.exchangeRate).toFixed(2),
-                    this.load_playerCoin.string = this.playerInfo.playerCoin.toFixed(2),
-                    this.load_bankCoin.string = (this.playerInfo.playerBankCoin / this.playerInfo.exchangeRate).toFixed(2)
+                this.playerInfo || (this.playerInfo = e("PlayerInfo").getInstant);
+                this.save_playerCoin.string = this.playerInfo.playerCoin.toFixed(2);
+                this.save_bankCoin.string = (this.playerInfo.playerBankCoin / this.playerInfo.exchangeRate).toFixed(2);
+                this.load_playerCoin.string = this.playerInfo.playerCoin.toFixed(2);
+                this.load_bankCoin.string = (this.playerInfo.playerBankCoin / this.playerInfo.exchangeRate).toFixed(2);
             },
             closePanelClick: function () {
                 this.node.active = !1
@@ -40300,10 +40305,11 @@ window.__require = function e(t, i, n) {
                 this.save_coin.string = (i / this.playerInfo.exchangeRate).toFixed(2)
             },
             bank_save_commit_Click: function () {
-                var e = parseFloat(this.save_coin.string) * this.playerInfo.exchangeRate;
-                e && e > 0 && this.netWork.socket.emit("updateBankScore", {
-                    saveCoin: e
-                })
+                // var e = parseFloat(this.save_coin.string) * this.playerInfo.exchangeRate;
+                // e && e > 0 && this.netWork.socket.emit("updateBankScore", {
+                //     saveCoin: e
+                // })
+                this.lobbyMain.showMessagebox_Function('Not supported yet', 1, 4)
             },
             bank_load_reSet_Click: function () {
                 this.load_coin.string = ""
