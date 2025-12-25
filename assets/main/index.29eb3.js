@@ -422,7 +422,7 @@ window.__require = function e(t, i, n) {
                             , o = this
                             , a = null;
                         cc.sys.isNative ? o.LandlordsSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.LandlordsSocket = a(t,{path:`/p${i}`})),
+                            o.LandlordsSocket = a(t, { path: `/p${i}` })),
                             o.LandlordsSocket.on("connect_error", function () {
                                 cc.log("\u8fde\u63a5\u5931\u8d25")
                             }),
@@ -8941,7 +8941,7 @@ window.__require = function e(t, i, n) {
                         this.socket = SocketIO.connect(Lhjconfig.Server_IP + this.port);
                     else {
                         var t = e("socket-io");
-                        this.socket = t(Lhjconfig.Server_IP,{path:`/p16027`})
+                        this.socket = t(Lhjconfig.Server_IP, { path: `/p16027` })
                     }
                     this.registEvent()
                 },
@@ -9265,7 +9265,7 @@ window.__require = function e(t, i, n) {
                             , o = this
                             , a = null;
                         cc.sys.isNative ? o.LandlordsSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.LandlordsSocket = a(t,{path:`/p${i}`})),
+                            o.LandlordsSocket = a(t, { path: `/p${i}` })),
                             o.LandlordsSocket.on("connect_error", function () {
                                 cc.log("\u8fde\u63a5\u5931\u8d25")
                             }),
@@ -18920,7 +18920,7 @@ window.__require = function e(t, i, n) {
                 i.loginGame_Function = function (t, n, s, o) {
                     var a = null;
                     cc.sys.isNative ? i.fishSocket = SocketIO.connect(t + ":" + n) : (a = e("socket-io"),
-                        i.fishSocket = a(t,{path:`/p${n}`})),
+                        i.fishSocket = a(t, { path: `/p${n}` })),
                         i.fishSocket.on("error", function () {
                             try {
                                 cc.sys.isBrowser && i.fishSocket.close(),
@@ -19876,7 +19876,7 @@ window.__require = function e(t, i, n) {
                 i.loginGame_Function = function (t, n, s, o) {
                     var a = null;
                     cc.sys.isNative ? i.fishSocket = SocketIO.connect(t + ":" + n) : (a = e("socket-io"),
-                        i.fishSocket = a(t,{path:`/p${n}`})),
+                        i.fishSocket = a(t, { path: `/p${n}` })),
                         i.fishSocket.on("error", function () {
                             try {
                                 cc.sys.isBrowser && i.fishSocket.close(),
@@ -20770,7 +20770,7 @@ window.__require = function e(t, i, n) {
                 i.loginGame_Function = function (t, n, s, o) {
                     var a = null;
                     cc.sys.isNative ? i.fishSocket = SocketIO.connect(t + ":" + n) : (a = e("socket-io"),
-                        i.fishSocket = a(t,{path:`/p${n}`})),
+                        i.fishSocket = a(t, { path: `/p${n}` })),
                         i.fishSocket.on("error", function () {
                             try {
                                 cc.sys.isBrowser && i.fishSocket.close(),
@@ -21718,7 +21718,7 @@ window.__require = function e(t, i, n) {
                 i.loginGame_Function = function (t, n, s, o) {
                     var a = null;
                     cc.sys.isNative ? i.fishSocket = SocketIO.connect(t + ":" + n) : (a = e("socket-io"),
-                        i.fishSocket = a(t,{path:`/p${n}`})),
+                        i.fishSocket = a(t, { path: `/p${n}` })),
                         i.fishSocket.on("error", function () {
                             try {
                                 cc.sys.isBrowser && i.fishSocket.close(),
@@ -22630,7 +22630,7 @@ window.__require = function e(t, i, n) {
                 i.loginGame_Function = function (t, n, s, o) {
                     var a = null;
                     cc.sys.isNative ? i.fishSocket = SocketIO.connect(t + ":" + n) : (a = e("socket-io"),
-                        i.fishSocket = a(t,{path:`/p${n}`})),
+                        i.fishSocket = a(t, { path: `/p${n}` })),
                         i.fishSocket.on("error", function () {
                             try {
                                 cc.sys.isBrowser && i.fishSocket.close(),
@@ -23537,7 +23537,7 @@ window.__require = function e(t, i, n) {
                 i.loginGame_Function = function (t, n, s, o) {
                     var a = null;
                     cc.sys.isNative ? i.fishSocket = SocketIO.connect(t + ":" + n) : (a = e("socket-io"),
-                        i.fishSocket = a(t,{path:`/p${n}`})),
+                        i.fishSocket = a(t, { path: `/p${n}` })),
                         i.fishSocket.on("error", function () {
                             try {
                                 cc.sys.isBrowser && i.fishSocket.close(),
@@ -24673,7 +24673,7 @@ window.__require = function e(t, i, n) {
                         var o = this
                             , a = null;
                         cc.sys.isNative ? o.flowerSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.flowerSocket = a(t,{path:`/p${i}`})),
+                            o.flowerSocket = a(t, { path: `/p${i}` })),
                             this.connectServer_Function(n, s),
                             this.flowerSocket.on("error", function () {
                                 cc.sys.isBrowser && o.flowerSocket.close(),
@@ -26514,7 +26514,7 @@ window.__require = function e(t, i, n) {
                         var o = this
                             , a = null;
                         cc.sys.isNative ? o.grabBullSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.grabBullSocket = a(t,{path:`/p${i}`})),
+                            o.grabBullSocket = a(t, { path: `/p${i}` })),
                             this.connectServer_Function(n, s),
                             this.grabBullSocket.on("error", function () {
                                 cc.sys.isBrowser && o.grabBullSocket.close(),
@@ -29072,7 +29072,7 @@ window.__require = function e(t, i, n) {
                         var o = this
                             , a = null;
                         cc.sys.isNative ? o.holdemSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.holdemSocket = a(t,{path:`/p${i}`})),
+                            o.holdemSocket = a(t, { path: `/p${i}` })),
                             this.connectServer_Function(n, s),
                             this.holdemSocket.on("error", function () {
                                 cc.sys.isBrowser && o.holdemSocket.close(),
@@ -29813,7 +29813,7 @@ window.__require = function e(t, i, n) {
                         var o = this
                             , a = null;
                         cc.sys.isNative ? o.gameSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.gameSocket = a(t,{path:`/p${i}`})),
+                            o.gameSocket = a(t, { path: `/p${i}` })),
                             this.connectServer_Function(n, s),
                             this.gameSocket.on("error", function () {
                                 cc.sys.isBrowser && o.gameSocket.close(),
@@ -37002,7 +37002,7 @@ window.__require = function e(t, i, n) {
                         this.socket = SocketIO.connect(Lhjconfig.Server_IP + this.port);
                     else {
                         var t = e("socket-io");
-                        this.socket = t(Lhjconfig.Server_IP,{path:`/p15200`})
+                        this.socket = t(Lhjconfig.Server_IP, { path: `/p15200` })
                     }
                     this.registEvent()
                 },
@@ -40455,7 +40455,7 @@ window.__require = function e(t, i, n) {
                 // this.canvasNode.getComponent("LobbyMain").bg_Black.active = !0,
                 //     this.canvasNode.getComponent("LobbyMain").com_Mail.active = !0,
                 //     this.canvasNode.getComponent("LobbyMain").netWork.socket.emit("getEmail")
-                Helper.http("index.php/api/index/app").then(res => {
+                Helper.http("api/index/app").then(res => {
                     // const a = document.createElement('a');
                     // a.href = res.data;
                     // a.target = '_blank';   // 如果你希望跳新窗口
@@ -41069,7 +41069,7 @@ window.__require = function e(t, i, n) {
                         uid: i,
                         sign: e("md5").getInstant.hex_md5(i + "fdgkl5rtlk4mvcccd765fdv")
                     });
-                Helper.http("index.php/agent/api/clientShow", n).then(function (e) {
+                Helper.http("agent/api/clientShow", n).then(function (e) {
                     t.setPoxyUI(e)
                 })
             },
@@ -41180,7 +41180,7 @@ window.__require = function e(t, i, n) {
                 // var e = this.canvasNode.getComponent("LobbyMain");
                 // this.canvasNode.getComponent("LobbyMain").com_rank.active = !0;
                 // e.netWork.socket.emit("getCoinRank");
-                Helper.http("index.php/api/index/service").then(res => {
+                Helper.http("api/index/service").then(res => {
                     if (res.code == 1) {
                         window.location.href = res.data;
                     }
@@ -41410,7 +41410,7 @@ window.__require = function e(t, i, n) {
                 var t = this;
 
                 setTimeout(function () {
-                    Helper.http("index.php/api/index/maintenance").then(res => {
+                    Helper.http("api/index/maintenance").then(res => {
                         if (res.data.open) {
                             t.showMessagebox_Function(res.data.maintenance, 1, 4);
                         }
@@ -41449,7 +41449,7 @@ window.__require = function e(t, i, n) {
                     this.wordFilter = e("WordFilter").getInstant,
                     cc.sys.isNative && window.platform_wx && (cc.find("Canvas/com_Login/wx_denglu").active = !0),
                     window.firstComeIn = !0,
-                    Helper.http("index.php/admin/api/imgs").then(function (e) {
+                    Helper.http("admin/api/imgs").then(function (e) {
                         var i = [];
                         for (var n in e)
                             e[n] && i.push(e[n]);
@@ -41871,7 +41871,7 @@ window.__require = function e(t, i, n) {
             pay_Function: function (e, t, i) {
                 if (e && !(e < 50)) {
                     var n = `${API_HOST}/`;
-                    if (n += "index.php/api/pay/pay/",
+                    if (n += "api/pay/pay/",
                         n += "uid/",
                         n += this.playerInfo.playerId,
                         n += "/fee/",
@@ -50166,7 +50166,7 @@ window.__require = function e(t, i, n) {
                             t.userid = s;
                         var a = null;
                         cc.sys.isNative ? t.rouletteSocket = SocketIO.connect(i + ":16022") : (a = e("socket-io"),
-                            t.rouletteSocket = a(i,{path:`/p16022`})),
+                            t.rouletteSocket = a(i, { path: `/p16022` })),
                             t.connectServer_Function(s, o),
                             t.rouletteSocket.on("connected", function (e) {
                                 if (e)
@@ -50567,7 +50567,7 @@ window.__require = function e(t, i, n) {
                             t.userid = s;
                         var a = null;
                         cc.sys.isNative ? t.rouletteSocket = SocketIO.connect(i + n) : (a = e("socket-io"),
-                            t.rouletteSocket = a(i,{path:`/p${n}`})),
+                            t.rouletteSocket = a(i, { path: `/p${n}` })),
                             t.connectServer_Function(s, o),
                             t.rouletteSocket.on("connected", function (e) {
                                 if (e)
@@ -57449,7 +57449,7 @@ window.__require = function e(t, i, n) {
                         this.socket = SocketIO.connect(Lhjconfig.Server_IP + this.port);
                     else {
                         var t = e("socket-io");
-                        this.socket = t(Lhjconfig.Server_IP,{path:`/p15201`})
+                        this.socket = t(Lhjconfig.Server_IP, { path: `/p15201` })
                     }
                     this.registEvent()
                 },
@@ -62098,7 +62098,7 @@ window.__require = function e(t, i, n) {
                             , a = null;
                         t = Lhjconfig.Server_IP,
                             cc.sys.isNative ? o.twoEightGameSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                                o.twoEightGameSocket = a(t,{path:`/p${i}`})),
+                                o.twoEightGameSocket = a(t, { path: `/p${i}` })),
                             o.twoEightGameSocket.on("error", function () {
                                 cc.sys.isBrowser && o.twoEightGameSocket.close(),
                                     o.twoEightGameSocket = null,
@@ -66409,7 +66409,7 @@ window.__require = function e(t, i, n) {
                         this.socket = SocketIO.connect(Lhjconfig.Server_IP + this.port);
                     else {
                         var t = e("socket-io");
-                        this.socket = t(Lhjconfig.Server_IP,{path:`/p16025`})
+                        this.socket = t(Lhjconfig.Server_IP, { path: `/p16025` })
                     }
                     this.registEvent()
                 },
@@ -66888,7 +66888,7 @@ window.__require = function e(t, i, n) {
                         this.socket = SocketIO.connect(Lhjconfig.Server_IP + this.port);
                     else {
                         var t = e("socket-io");
-                        this.socket = t(Lhjconfig.Server_IP,{path:`/p16001`})
+                        this.socket = t(Lhjconfig.Server_IP, { path: `/p16001` })
                     }
                     this.registEvent()
                 },
@@ -72375,7 +72375,7 @@ window.__require = function e(t, i, n) {
                             , o = this
                             , a = null;
                         cc.sys.isNative ? o.LandlordsSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.LandlordsSocket = a(t,{path:`/p${i}`})),
+                            o.LandlordsSocket = a(t, { path: `/p${i}` })),
                             o.LandlordsSocket.on("connect_error", function () {
                                 cc.log("\u8fde\u63a5\u5931\u8d25")
                             }),
@@ -72780,7 +72780,7 @@ window.__require = function e(t, i, n) {
                             , o = this
                             , a = null;
                         cc.sys.isNative ? o.LandlordsSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.LandlordsSocket = a(t,{path:`/p${i}`})),
+                            o.LandlordsSocket = a(t, { path: `/p${i}` })),
                             o.LandlordsSocket.on("connect_error", function () {
                                 cc.log("\u8fde\u63a5\u5931\u8d25")
                             }),
@@ -74063,7 +74063,7 @@ window.__require = function e(t, i, n) {
                             , o = this
                             , a = null;
                         cc.sys.isNative ? o.LandlordsSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.LandlordsSocket = a(t,{path:`/p${i}`})),
+                            o.LandlordsSocket = a(t, { path: `/p${i}` })),
                             o.LandlordsSocket.on("connect_error", function () {
                                 cc.log("\u8fde\u63a5\u5931\u8d25")
                             }),
@@ -75163,7 +75163,7 @@ window.__require = function e(t, i, n) {
                             , o = this
                             , a = null;
                         cc.sys.isNative ? o.LandlordsSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.LandlordsSocket = a(t,{path:`/p${i}`})),
+                            o.LandlordsSocket = a(t, { path: `/p${i}` })),
                             o.LandlordsSocket.on("connect_error", function () {
                                 cc.log("\u8fde\u63a5\u5931\u8d25")
                             }),
@@ -78290,7 +78290,7 @@ window.__require = function e(t, i, n) {
                             , o = this
                             , a = null;
                         cc.sys.isNative ? o.LandlordsSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.LandlordsSocket = a(t,{path:`/p${i}`})),
+                            o.LandlordsSocket = a(t, { path: `/p${i}` })),
                             o.LandlordsSocket.on("connect_error", function () {
                                 cc.log("\u8fde\u63a5\u5931\u8d25")
                             }),
@@ -78813,7 +78813,7 @@ window.__require = function e(t, i, n) {
                     edit_box: cc.EditBox
                 },
                 onLoad: function () {
-                    this.url_ = `${API_HOST}/index.php/agent/api/uidcode`;
+                    this.url_ = `${API_HOST}/agent/api/uidcode`;
                     this.key_ = "fdgkl5rtlk4mfdv";
                 },
                 start: function () {
@@ -78910,7 +78910,7 @@ window.__require = function e(t, i, n) {
                             , o = this
                             , a = null;
                         cc.sys.isNative ? o.LandlordsSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.LandlordsSocket = a(t,{path:`/p${i}`})),
+                            o.LandlordsSocket = a(t, { path: `/p${i}` })),
                             o.LandlordsSocket.on("connect_error", function () {
                                 cc.log("\u8fde\u63a5\u5931\u8d25")
                             }),
@@ -81048,7 +81048,7 @@ window.__require = function e(t, i, n) {
                             , o = this
                             , a = null;
                         cc.sys.isNative ? o.LandlordsSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.LandlordsSocket = a(t,{path:`/p${i}`})),
+                            o.LandlordsSocket = a(t, { path: `/p${i}` })),
                             o.LandlordsSocket.on("connect_error", function () {
                                 cc.log("\u8fde\u63a5\u5931\u8d25")
                             }),
@@ -81682,7 +81682,7 @@ window.__require = function e(t, i, n) {
                             , o = this
                             , a = null;
                         cc.sys.isNative ? o.LandlordsSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.LandlordsSocket = a(t,{path:`/p${i}`})),
+                            o.LandlordsSocket = a(t, { path: `/p${i}` })),
                             o.LandlordsSocket.on("connect_error", function () {
                                 cc.log("\u8fde\u63a5\u5931\u8d25")
                             }),
@@ -87289,7 +87289,7 @@ window.__require = function e(t, i, n) {
                             , o = this
                             , a = null;
                         cc.sys.isNative ? o.LandlordsSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.LandlordsSocket = a(t,{path:`/p${i}`})),
+                            o.LandlordsSocket = a(t, { path: `/p${i}` })),
                             o.LandlordsSocket.on("connect_error", function () {
                                 cc.log("\u8fde\u63a5\u5931\u8d25")
                             }),
@@ -93161,7 +93161,7 @@ window.__require = function e(t, i, n) {
                             , o = this
                             , a = null;
                         cc.sys.isNative ? o.LandlordsSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.LandlordsSocket = a(t,{path:`/p${i}`})),
+                            o.LandlordsSocket = a(t, { path: `/p${i}` })),
                             o.LandlordsSocket.on("connect_error", function () {
                                 cc.log("\u8fde\u63a5\u5931\u8d25")
                             }),
@@ -103895,7 +103895,7 @@ window.__require = function e(t, i, n) {
                             , o = this
                             , a = null;
                         cc.sys.isNative ? o.LandlordsSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.LandlordsSocket = a(t,{path:`/p${i}`})),
+                            o.LandlordsSocket = a(t, { path: `/p${i}` })),
                             o.LandlordsSocket.on("connect_error", function () {
                                 cc.log("\u8fde\u63a5\u5931\u8d25")
                             }),
@@ -105582,7 +105582,7 @@ window.__require = function e(t, i, n) {
                         this.socket = SocketIO.connect(Lhjconfig.Server_IP + this.port);
                     else {
                         var t = e("socket-io");
-                        this.socket = t(Lhjconfig.Server_IP,{path:`/p16006`})
+                        this.socket = t(Lhjconfig.Server_IP, { path: `/p16006` })
                     }
                     this.registEvent()
                 },
@@ -111299,7 +111299,7 @@ window.__require = function e(t, i, n) {
                             , o = this
                             , a = null;
                         cc.sys.isNative ? o.LandlordsSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.LandlordsSocket = a(t,{path:`/p${i}`})),
+                            o.LandlordsSocket = a(t, { path: `/p${i}` })),
                             o.LandlordsSocket.on("connect_error", function () {
                                 cc.log("\u8fde\u63a5\u5931\u8d25")
                             }),
@@ -113165,7 +113165,7 @@ window.__require = function e(t, i, n) {
                             , o = this
                             , a = null;
                         cc.sys.isNative ? o.LandlordsSocket = SocketIO.connect(t + ":" + i) : (a = e("socket-io"),
-                            o.LandlordsSocket = a(t,{path:`/p${i}`})),
+                            o.LandlordsSocket = a(t, { path: `/p${i}` })),
                             o.LandlordsSocket.on("connect_error", function () {
                                 cc.log("\u8fde\u63a5\u5931\u8d25")
                             }),
@@ -115844,7 +115844,17 @@ cc.game.once(cc.game.EVENT_ENGINE_INITED, () => {
     const lang = cc.sys.localStorage.getItem("language")
     console.log('i18n ready:', i18n, lang);
 
-    Helper.http("index.php/api/index/ip").then(res => {
+    get_config('WALLET_TITLE').then(res => {
+        const temp = i18n.t;
+        i18n.t = function (key) {
+            if (key === 'CZZX_K') {
+                return res.data;
+            }
+            return temp(key);
+        }
+    })
+
+    Helper.http("api/index/ip").then(res => {
         if (res.code == 1) {
             const code = res.data.countryCode
             if (code == 'ID') {

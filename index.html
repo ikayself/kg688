@@ -55,6 +55,27 @@
       return `${WS_HOST}/p${port}`
     }
 
+    async function get_config(...keys) {
+      return http_api('/api/index/config', { keys: keys })
+    }
+
+    async function http_api(api, data) {
+      const url = api.startsWith('http') ? api : new URL(api, API_HOST).href
+
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+
+      const type = response.headers.get('content-type') || ''
+      if (type.includes('json')) {
+        return await response.json()
+      }
+      return await response.text()
+    }
+
+
     (function () {
       // open web debugger console
       if (typeof VConsole !== 'undefined') {
@@ -102,13 +123,10 @@
       s.parentNode.insertBefore(t, s)
     }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 
-    fetch(`${API_HOST}/index.php/api/index/fb`).then(async res => {
-      const data = await res.json();
-      const meta_pixel = data.data.meta_pixel;
-      if (meta_pixel) {
-        fbq('init', meta_pixel);
-        fbq('track', 'PageView');
-      }
+    get_config('META_PIXEL').then(res => {
+      const meta_pixel = res.data;
+      fbq('init', meta_pixel);
+      fbq('track', 'PageView');
     })
   </script>
   <noscript><img height="1" width="1" style="display:none"
