@@ -40342,6 +40342,7 @@ window.__require = function e(t, i, n) {
                     saveCoin: -e,
                     pwd: this.load_pwd.string
                 })
+                this.lobbyMain.showMessagebox_Function('Submission successful', 1, 4)
             },
             bank_update_commit_Click: function () {
                 this.update_newpwd.string == this.update_newpwd2.string ? this.netWork.socket.emit("updateBankpwd", {
