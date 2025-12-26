@@ -40815,7 +40815,7 @@ window.__require = function e(t, i, n) {
                 if (i == 'com_MoneyBag') {
                     const uid = this.canvasNode.getComponent("LobbyMain").playerInfo.playerId;
                     Helper.http(`api/index/bank?uid=${uid}`).then(res => {
-                        if (res.code == 1) {
+                        if (res.code == 1 && res.data) {
                             com.getChildByName("com_BindCreditCard").getChildByName("eb_Name").getComponent("cc.EditBox").string = res.data.name;
                             com.getChildByName("com_BindCreditCard").getChildByName("eb_Account").getComponent("cc.EditBox").string = res.data.account;
                             com.getChildByName("com_BindCreditCard").getChildByName("eb_AccountConfirm").getComponent("cc.EditBox").string = res.data.account;
@@ -43033,7 +43033,6 @@ window.__require = function e(t, i, n) {
                             t.changeResultJSON(e).ResultCode ? t.lobbyMain.getComponent("LobbyMain").showMessagebox_Function(i.t("TIP13_MSG"), 1, 4) : t.lobbyMain.getComponent("LobbyMain").showMessagebox_Function(i.t("\u4fee\u6539\u5931\u8d25"), 1, 4)
                         }),
                         t.socket.on("noticeMsg", function (e) {
-                            console.log("noticeMsg:" + JSON.stringify(e));
                             var i = t.changeResultJSON(e);
                             if (t.lobbyMain.systemMessageArray ? t.lobbyMain.systemMessageArray = [] : t.lobbyMain.systemMessageArray = new Array(0),
                                 t.lobbyMain.com_SystemMessage) {
