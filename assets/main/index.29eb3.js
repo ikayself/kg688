@@ -30270,7 +30270,7 @@ window.__require = function e(t, i, n) {
                 ,
                 i.uiResize_Function = function () {
                     var e = cc.view.getVisibleSize(), t = e.width / 1334;
-                    if(!this.sp_BG){
+                    if (!this.sp_BG) {
                         return;
                     }
                     e.width > 1334 ? (this.sp_BG.node.scaleX = t,
@@ -40370,7 +40370,9 @@ window.__require = function e(t, i, n) {
                     type: cc.Node
                 }
             },
-            onLoad: function () { },
+            onLoad: function () {
+
+            },
             loginMenuLoginButtonClick_Function: function () {
                 var e = this.canvasNode.getComponent("LobbyMain").com_Login.getChildByName("eb_Account").getComponent("cc.EditBox").string
                     , t = this.canvasNode.getComponent("LobbyMain").com_Login.getChildByName("eb_Password").getComponent("cc.EditBox").string;
@@ -40807,7 +40809,20 @@ window.__require = function e(t, i, n) {
                 for (t.getComponent("cc.Button").interactable = !1,
                     n = 9; n < e.getComponent("LobbyMain").com_PlayerInfo.children.length; n++)
                     e.getComponent("LobbyMain").com_PlayerInfo.children[n].active = !1;
-                this.canvasNode.getComponent("LobbyMain").com_PlayerInfo.getChildByName(i).active = !0
+                const com = this.canvasNode.getComponent("LobbyMain").com_PlayerInfo.getChildByName(i);
+                com.active = !0;
+
+                if (i == 'com_MoneyBag') {
+                    const uid = this.canvasNode.getComponent("LobbyMain").playerInfo.playerId;
+                    Helper.http(`api/index/bank?uid=${uid}`).then(res => {
+                        if (res.code == 1) {
+                            com.getChildByName("com_BindCreditCard").getChildByName("eb_Name").getComponent("cc.EditBox").string = res.data.name;
+                            com.getChildByName("com_BindCreditCard").getChildByName("eb_Account").getComponent("cc.EditBox").string = res.data.account;
+                            com.getChildByName("com_BindCreditCard").getChildByName("eb_AccountConfirm").getComponent("cc.EditBox").string = res.data.account;
+                            com.getChildByName("com_BindCreditCard").getChildByName("eb_BankType").getComponent("cc.EditBox").string = res.data.bankType;
+                        }
+                    })
+                }
             },
             createAccountMenuCreateButtonClick_Function: function () {
                 var e = this.canvasNode.getComponent("LobbyMain").com_PlayerInfo.getChildByName("com_CreateAccount").getChildByName("eb_Account").getComponent("cc.EditBox").string
