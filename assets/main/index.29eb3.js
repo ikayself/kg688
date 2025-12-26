@@ -30269,8 +30269,10 @@ window.__require = function e(t, i, n) {
                 }
                 ,
                 i.uiResize_Function = function () {
-                    var e = cc.view.getVisibleSize()
-                        , t = e.width / 1334;
+                    var e = cc.view.getVisibleSize(), t = e.width / 1334;
+                    if(!this.sp_BG){
+                        return;
+                    }
                     e.width > 1334 ? (this.sp_BG.node.scaleX = t,
                         this.sp_BG.node.scaleY = t) : e.width < 1334 && (this.sp_BG.node.scaleX = 1 / t,
                             this.sp_BG.node.scaleY = 1 / t)
