@@ -45,6 +45,14 @@
     const API_HOST = 'https://admin.kg688.cyou';
     const WS_HOST = 'https://api.kg688.cyou';
 
+    window.addEventListener('load', function () {
+      if (window.webkit && window.webkit.messageHandlers) {
+        window.webkit.messageHandlers.webPageRendered.postMessage({
+          status: 'ok'
+        });
+      }
+    });
+
     function getQueryParam(key) {
       const url = window.location.href;
       const params = new URL(url).searchParams;
