@@ -46,10 +46,14 @@
     const WS_HOST = 'https://api.kg688.cyou';
 
     window.addEventListener('load', function () {
-      if (window.webkit && window.webkit.messageHandlers) {
-        window.webkit.messageHandlers.webPageRendered.postMessage({
-          status: 'ok'
-        });
+      // Android
+      if (window.Android && window.Android.webPageRendered) {
+        window.Android.webPageRendered("ok");
+      }
+
+      // iOS 原来的写法
+      if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.webPageRendered) {
+        window.webkit.messageHandlers.webPageRendered.postMessage({ status: 'ok' });
       }
     });
 
